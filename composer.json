@@ -9,6 +9,6 @@
             "email": "anh.nguyen@inapps.net"
         }
     ],
-    "minimum-stability": "beta",
+    "minimum-stability": "dev",
     "require": {}
 }
