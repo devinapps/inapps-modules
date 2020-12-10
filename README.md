@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 InApps module structure maker for Laravel Framework.
-# Target
+# Targets
   - To split features into Modules.
   - To defines each task inside a feature.
   - To make any module portable as a standalone package.
@@ -16,6 +16,14 @@ Register Service in `config\app.php`
 ```sh
 \InApps\IAModules\InAppsServiceProvider::class
 ```
+
+### Usage
+```sh
+php artisan ia-modules:make <moduleName> <groupName>
+```
+Eg: 
+`php artisan ia-modules:make test` will create `modules/admin/Test`
+`php artisan ia-modules:make testModule group` will create `modules/group/TestModule`
 
 ### Todos
  - Add Shared Tasks
