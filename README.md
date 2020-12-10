@@ -1,7 +1,9 @@
 # inapps-modules
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-InApps module structure maker for Laravel Framework.
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger) 
+
+# InApps module structure generator for Laravel Framework.
+
 # Targets
   - To split features into Modules.
   - To defines each task inside a feature.
