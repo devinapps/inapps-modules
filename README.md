@@ -22,8 +22,8 @@ Register Service in `config\app.php`
 php artisan ia-modules:make <moduleName> <groupName>
 ```
 Eg: 
-`php artisan ia-modules:make test` will create `modules/admin/Test`
-`php artisan ia-modules:make testModule group` will create `modules/group/TestModule`
+ - `php artisan ia-modules:make test` will create `modules/admin/Test`
+ - `php artisan ia-modules:make testModule group` will create `modules/group/TestModule`
 
 ### Todos
  - Add Shared Tasks
