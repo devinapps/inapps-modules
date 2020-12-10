@@ -1,0 +1,14 @@
+{
+    "name": "inapps/inapps-modules",
+    "description": "InApps module structure maker for its laravel projects.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Derek Nguyen",
+            "email": "anh.nguyen@inapps.net"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {}
+}
