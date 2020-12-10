@@ -6,7 +6,7 @@
 
 # Targets
   - To split features into Modules.
-  - To defines each task inside a feature.
+  - To define tasks inside a feature.
   - To make any module portable as a standalone package.
 
 ### Installation
@@ -28,7 +28,6 @@ Eg:
  - `php artisan ia-modules:make testModule group` will create `modules/group/TestModule`
 
 ### Todos
- - Add Shared Tasks
  - Add Test
 
 License
