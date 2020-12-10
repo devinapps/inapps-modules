@@ -41,7 +41,7 @@ class CreateModule extends Command
         //Start create package files
         $modules_path = base_path() . '/modules';
         $this->makeDir($modules_path);
-        $core_module_path = base_path('packages/inapps/inapps-modules/src/CoreModule');
+        $core_module_path = base_path('vendor/inapps/inapps-modules/src/CoreModule');
         $new_module_path = $modules_path . '/' . (!empty($root_folder_name) ? $root_folder_name . '/' : '') . $model_name;
 
         //Clone example package folder to new package folder
