@@ -2,7 +2,8 @@
 
 namespace Modules\IACoreModule\Providers;
 
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
 class IACoreServiceProvider extends ServiceProvider
 {
@@ -13,8 +14,16 @@ class IACoreServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Register Routes
+        Route::prefix('api')
+            ->middleware(['api'])
+            ->group(__DIR__ . '/../api.php');
+
+        Route::middleware(['web'])
+            ->namespace($this->namespace)
+            ->group(__DIR__ . '/../routes.php');
+
         // Register loaders
-        $this->loadRoutesFrom(__DIR__ . '/../routes.php');
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'IACoreModule');
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
         $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'IACoreModule');

@@ -26,6 +26,9 @@ class InAppsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Register default middleware
+        $this->middlewareGroup('InApps', [BaseMiddleware::class]);
+
         // Register the command if we are using the application via the CLI
         if ($this->app->runningInConsole()) {
             $this->commands(

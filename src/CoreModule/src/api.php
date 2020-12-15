@@ -12,6 +12,4 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    echo 'I am loaded in web';
-})->middleware('IACoreMiddleware');
+Route::resource('/', 'Modules\IACoreModule\Controllers\IACoreController')->middleware('IACoreMiddleware');;
