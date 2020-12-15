@@ -3,7 +3,7 @@
 namespace InApps\IAModules;
 
 use Composer\Autoload\ClassLoader;
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use InApps\IAModules\Console\CreateModule;
 use Symfony\Component\Finder\Iterator\RecursiveDirectoryIterator;
 
