@@ -44,8 +44,8 @@ class BaseMiddleware
         $route = BaseHelper::getRoute($request);
         $this->response->headers->set('controller', isset($route['controller']) ? $route['controller'] : '');
         $this->response->headers->set('action', isset($route['action']) ? $route['action'] : '');
-
         BaseHelper::writeRequestLog($request_info, $this->response);
+
         // Set trace id and log level to output headers
         $this->response->headers->set('trace-id', BaseHeader::getTraceId());
         $this->response->headers->set('log-level', BaseHeader::getLogLevel());
@@ -55,5 +55,7 @@ class BaseMiddleware
             $content['response'] = $this->response->body();
             LogHelper::debug('--DEBUG--', $content);
         }
+
+        return $this->response;
     }
 }

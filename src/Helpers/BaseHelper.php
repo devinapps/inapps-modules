@@ -73,16 +73,16 @@ class BaseHelper
      */
     public static function getRoute($request)
     {
-        $route['controller'] = null;
-        $route['action'] = null;
+        $ret['controller'] = null;
+        $ret['action'] = null;
         $route = $request->route();
-        if (!empty($route[1]['uses'])) {
-            $arrRoutes = explode('@', $route[1]['uses']);
+        if (!empty($route->action['uses'])) {
+            $arrRoutes = explode('@', $route->action['uses']);
             $arrPath = explode('\\', $arrRoutes[0]);
-            $route['controller'] = $arrPath[count($arrPath) - 1];
-            $route['action'] = $arrRoutes[1];
+            $ret['controller'] = $arrPath[count($arrPath) - 1];
+            $ret['action'] = $arrRoutes[1];
         }
-        return $route;
+        return $ret;
     }
 
     public static function arrayMSort($array, $cols, $reindex = true)
