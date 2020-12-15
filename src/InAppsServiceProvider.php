@@ -5,6 +5,7 @@ namespace InApps\IAModules;
 use Composer\Autoload\ClassLoader;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use InApps\IAModules\Console\CreateModule;
+use InApps\IAModules\Helpers\BaseHeader;
 use Symfony\Component\Finder\Iterator\RecursiveDirectoryIterator;
 
 class InAppsServiceProvider extends ServiceProvider
@@ -16,7 +17,8 @@ class InAppsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // Bind BaseHeader singleton class
+        $this->app->singleton(BaseHeader::class);
     }
 
     /**
