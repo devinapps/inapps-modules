@@ -24,7 +24,7 @@ class LogHelper
      *
      * @return void
      */
-    public static function emergency($message, array $context = [], bool $supportELK = null)
+    public static function emergency($message, array $context = [], $supportELK = false)
     {
         $validateAttributes = self::validateLogAttribute($message, $context);
         if ($validateAttributes) {
@@ -48,7 +48,7 @@ class LogHelper
      *
      * @return void
      */
-    public static function alert($message, array $context = [], bool $supportELK = null)
+    public static function alert($message, array $context = [], $supportELK = false)
     {
         $validateAttributes = self::validateLogAttribute($message, $context);
         if ($validateAttributes) {
@@ -71,7 +71,7 @@ class LogHelper
      *
      * @return void
      */
-    public static function critical($message, array $context = [], bool $supportELK = null)
+    public static function critical($message, array $context = [], $supportELK = false)
     {
         $validateAttributes = self::validateLogAttribute($message, $context);
         if ($validateAttributes) {
@@ -93,7 +93,7 @@ class LogHelper
      *
      * @return void
      */
-    public static function error($message, array $context = [], bool $supportELK = null)
+    public static function error($message, array $context = [], $supportELK = false)
     {
         $validateAttributes = self::validateLogAttribute($message, $context);
         if ($validateAttributes) {
@@ -117,7 +117,7 @@ class LogHelper
      *
      * @return void
      */
-    public static function warning($message, array $context = [], bool $supportELK = null)
+    public static function warning($message, array $context = [], $supportELK = false)
     {
         $validateAttributes = self::validateLogAttribute($message, $context);
         if ($validateAttributes) {
@@ -138,7 +138,7 @@ class LogHelper
      *
      * @return void
      */
-    public static function notice($message, array $context = [], bool $supportELK = null)
+    public static function notice($message, array $context = [], $supportELK = false)
     {
         $validateAttributes = self::validateLogAttribute($message, $context);
         if ($validateAttributes) {
@@ -162,7 +162,7 @@ class LogHelper
      *
      * @return void
      */
-    public static function info($message, array $context = [], bool $supportELK = null)
+    public static function info($message, array $context = [], $supportELK = false)
     {
         $validateAttributes = self::validateLogAttribute($message, $context);
         if ($validateAttributes) {
@@ -180,7 +180,7 @@ class LogHelper
      *
      * @return void
      */
-    public static function debug($message, array $context = [], bool $supportELK = null)
+    public static function debug($message, array $context = [], $supportELK = false)
     {
         $validateAttributes = self::validateLogAttribute($message, $context);
         if ($validateAttributes) {
@@ -201,7 +201,7 @@ class LogHelper
      *
      * @return void
      */
-    public static function log($level, $message, array $context = [], bool $supportELK = null)
+    public static function log($level, $message, array $context = [], $supportELK = false)
     {
         $validateAttributes = self::validateLogAttribute($message, $context);
         if ($validateAttributes) {
